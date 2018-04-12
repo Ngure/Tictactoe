@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:layout_width="297dp"
+        android:layout_height="381dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/tic_tac_toe" />
+
+    <Button
+        android:id="@+id/onePlayer"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#CC1100"
+        android:text="@string/_1_player"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/twoPlayers"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="#CC1100"
+        android:text="@string/_2_players"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+</LinearLayout>
