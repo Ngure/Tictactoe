@@ -27,7 +27,7 @@ public class HomeActivity extends AppCompatActivity {
 
         onePlayer.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
+            public void onClick(View v) {
 
                 Intent intent = new Intent(context, OnePlayerActivity.class);
                 startActivity(intent);
@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
 
         twoPlayers.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
+            public void onClick(View v) {
 
                 Intent intent = new Intent(context, TwoPlayersActivity.class);
                 startActivity(intent);

@@ -8,16 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TwoPlayersActivity extends AppCompatActivity implements View.OnClickListener {
+public class TwoPlayersActivity extends AppCompatActivity  implements View.OnClickListener {
 
     private final Button[][] buttons = new Button[3][3];
 
-    private boolean player1Turn = true;
+    private boolean playerOneTurn = true;
 
     private int roundCount;
 
-    private int player1Points;
-    private int player2Points;
+    private int playerOnePoints;
+    private int playerTwoPoints;
 
     private TextView playerOne;
     private TextView playerTwo;
@@ -46,11 +46,11 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
             @Override
             public void onClick(View v) {
 
-                player1Points = 0;
-                player2Points = 0;
+                playerOnePoints = 0;
+                playerTwoPoints = 0;
 
-                playerOne.setText("Player 1: " + player1Points);
-                playerTwo.setText("Player 2: " + player2Points);
+                playerOne.setText("Player 1: " + playerOnePoints);
+                playerTwo.setText("Player 2: " + playerTwoPoints);
 
             }
         });
@@ -63,9 +63,8 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
             return;
         }
 
-        if (player1Turn) {
+        if (playerOneTurn) {
             ((Button) v).setText("X");
-
         } else {
             ((Button) v).setText("O");
         }
@@ -73,18 +72,15 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
         roundCount++;
 
         if (checkForWin()) {
-            if (player1Turn) {
-                player1Wins();
-
+            if (playerOneTurn) {
+                playerOneWins();
             } else {
-                player2Wins();
-
+                playerTwoWins();
             }
         } else if (roundCount == 9) {
             draw();
-
         } else {
-            player1Turn = !player1Turn;
+            playerOneTurn = !playerOneTurn;
         }
 
     }
@@ -118,36 +114,29 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
 
     }
 
-    private void player1Wins() {
-        player1Points++;
-
+    private void playerOneWins() {
+        playerOnePoints++;
         Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_SHORT).show();
-
         updatePointsText();
-
         resetBoard();
     }
 
-    private void player2Wins() {
-        player2Points++;
-
+    private void playerTwoWins() {
+        playerTwoPoints++;
         Toast.makeText(this, "Player 2 wins!", Toast.LENGTH_SHORT).show();
-
         updatePointsText();
-
         resetBoard();
     }
 
     private void draw() {
         Toast.makeText(this, "Draw!", Toast.LENGTH_SHORT).show();
-
         resetBoard();
     }
 
     @SuppressLint("SetTextI18n")
     private void updatePointsText() {
-        playerOne.setText("Player 1: " + player1Points);
-        playerTwo.setText("Player 2: " + player2Points);
+        playerOne.setText("Player 1: " + playerOnePoints);
+        playerTwo.setText("Player 2: " + playerTwoPoints);
     }
 
     private void resetBoard() {
@@ -158,7 +147,7 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
         }
 
         roundCount = 0;
-        player1Turn = true;
+        playerOneTurn = true;
 
     }
 }

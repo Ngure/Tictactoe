@@ -35,12 +35,12 @@
     </RelativeLayout>
 
     <LinearLayout
-        style="?android:buttonBarButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/button_00"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -49,6 +49,7 @@
             android:textSize="60sp" />
 
         <Button
+            android:id="@+id/button_02"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -57,6 +58,7 @@
             android:textSize="60sp" />
 
         <Button
+            android:id="@+id/button_03"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -67,12 +69,12 @@
     </LinearLayout>
 
     <LinearLayout
-        style="?android:buttonBarButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/button_10"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -81,6 +83,7 @@
             android:textSize="60sp" />
 
         <Button
+            android:id="@+id/button_11"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -89,6 +92,7 @@
             android:textSize="60sp" />
 
         <Button
+            android:id="@+id/button_12"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -99,12 +103,12 @@
     </LinearLayout>
 
     <LinearLayout
-        style="?android:buttonBarButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/button_20"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -113,6 +117,7 @@
             android:textSize="60sp" />
 
         <Button
+            android:id="@+id/button_21"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -121,6 +126,7 @@
             android:textSize="60sp" />
 
         <Button
+            android:id="@+id/button_22"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
