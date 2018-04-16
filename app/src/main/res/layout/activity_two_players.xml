@@ -49,7 +49,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button_02"
+            android:id="@+id/button_01"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
@@ -58,7 +58,7 @@
             android:textSize="60sp" />
 
         <Button
-            android:id="@+id/button_03"
+            android:id="@+id/button_02"
             style="?android:buttonBarButtonStyle"
             android:layout_width="113dp"
             android:layout_height="match_parent"
