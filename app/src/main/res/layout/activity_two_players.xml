@@ -46,6 +46,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <Button
@@ -55,6 +56,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <Button
@@ -64,6 +66,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
     </LinearLayout>
@@ -80,6 +83,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <Button
@@ -89,6 +93,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <Button
@@ -98,6 +103,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
     </LinearLayout>
@@ -114,6 +120,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <Button
@@ -123,6 +130,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
         <Button
@@ -132,6 +140,7 @@
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
+            android:textColor="#000000"
             android:textSize="60sp" />
 
     </LinearLayout>
