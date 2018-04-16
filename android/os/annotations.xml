@@ -1,0 +1,6 @@
+<!--suppress ALL -->
+<root>
+    <item name='android.os.BaseBundle java.lang.String getString(java.lang.String)'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

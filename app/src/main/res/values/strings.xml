@@ -8,4 +8,7 @@
     <string name="_2_players">2 players</string>
     <string name="player_1_0">Player 1: 0</string>
     <string name="player_2_0">Player 2: 0</string>
+    <string name="begin">begin</string>
+    <string name="player_one_name">Player One Name</string>
+    <string name="player_two_name">Player Two Name</string>
 </resources>

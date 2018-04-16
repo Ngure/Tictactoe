@@ -1,12 +1,15 @@
 package com.example.android.tic_tac_toe;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Objects;
 
 public class TwoPlayersActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,6 +33,14 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
         playerOne = findViewById(R.id.playerOne);
         playerTwo = findViewById(R.id.playerTwo);
 
+        Intent in = getIntent();
+        //noinspection deprecation
+        final String playerOneName = Objects.requireNonNull(in.getExtras()).getString("playerOneName");
+        //noinspection deprecation
+        final String playerTwoName = in.getExtras().getString("playerTwoName");
+        playerOne.setText(playerOneName);
+        playerTwo.setText(playerTwoName);
+
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -49,8 +60,8 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
                 playerOnePoints = 0;
                 playerTwoPoints = 0;
 
-                playerOne.setText("Player 1: " + playerOnePoints);
-                playerTwo.setText("Player 2: " + playerTwoPoints);
+                playerOne.setText(playerOneName + playerOnePoints);
+                playerTwo.setText(playerTwoName + playerTwoPoints);
 
             }
         });
@@ -133,10 +144,19 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
         resetBoard();
     }
 
+    @SuppressWarnings("ConstantConditions")
     @SuppressLint("SetTextI18n")
     private void updatePointsText() {
-        playerOne.setText("Player 1: " + playerOnePoints);
-        playerTwo.setText("Player 2: " + playerTwoPoints);
+        Intent in = getIntent();
+        //noinspection deprecation
+        final String playerOneName = in.getExtras().getString("playerOneName");
+        //noinspection deprecation
+        final String playerTwoName = in.getExtras().getString("playerTwoName");
+        playerOne.setText(playerOneName);
+        playerTwo.setText(playerTwoName);
+
+        playerOne.setText(playerOneName + playerOnePoints);
+        playerTwo.setText(playerTwoName + playerTwoPoints);
     }
 
     private void resetBoard() {
