@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class TwoPlayersActivity extends AppCompatActivity  implements View.OnClickListener {
+public class TwoPlayersActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final Button[][] buttons = new Button[3][3];
 
