@@ -126,15 +126,29 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void playerOneWins() {
+
         playerOnePoints++;
-        Toast.makeText(this, "Player 1 wins!", Toast.LENGTH_SHORT).show();
+
+        Intent in = getIntent();
+        //noinspection deprecation
+        final String playerOneName = Objects.requireNonNull(in.getExtras()).getString("playerOneName");
+        playerTwo.setText(playerOneName);
+
+        Toast.makeText(this, playerOneName + " Wins!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
     }
 
     private void playerTwoWins() {
+
         playerTwoPoints++;
-        Toast.makeText(this, "Player 2 wins!", Toast.LENGTH_SHORT).show();
+
+        Intent in = getIntent();
+        //noinspection deprecation
+        final String playerTwoName = Objects.requireNonNull(in.getExtras()).getString("playerTwoName");
+        playerTwo.setText(playerTwoName);
+
+        Toast.makeText(this, playerTwoName + " Wins!", Toast.LENGTH_SHORT).show();
         updatePointsText();
         resetBoard();
     }
