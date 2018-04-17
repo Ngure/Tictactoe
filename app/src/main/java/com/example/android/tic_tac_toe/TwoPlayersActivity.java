@@ -15,7 +15,7 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
 
     private final Button[][] buttons = new Button[3][3];
 
-    private boolean playerOneTurn = true;
+    private boolean playerOneTurn, playerTwoTurn;
 
     private int roundCount;
 
@@ -66,10 +66,24 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
             }
         });
 
+        java.util.Random generator = new java.util.Random();
+        int rand = generator.nextInt(2) + 1;
+
+        if(rand == 1){
+            playerOneTurn = true;
+            playerTwoTurn = false;
+            Toast.makeText(this, playerOneName + " won the first move!", Toast.LENGTH_SHORT).show();
+        } else {
+            playerOneTurn = false;
+            playerTwoTurn = true;
+            Toast.makeText(this, playerTwoName + " won the first move!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     @Override
     public void onClick(View v) {
+
         if (!((Button) v).getText().toString().equals("")) {
             return;
         }

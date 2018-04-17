@@ -32,12 +32,12 @@ public class NameActivity extends AppCompatActivity {
 
                 EditText playerOneName = findViewById(R.id.playerOneName);
                 EditText playerTwoName = findViewById(R.id.playerTwoName);
+
                 Intent intent = new Intent(context, TwoPlayersActivity.class);
                 intent.putExtra("playerOneName", playerOneName.getText().toString());
                 intent.putExtra("playerTwoName", playerTwoName.getText().toString());
                 startActivity(intent);
             }
         });
-
     }
 }
