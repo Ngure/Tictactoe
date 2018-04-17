@@ -16,4 +16,4 @@ Located under app/release/app-release.apk
 
                                        MOCKUP
 
-Located in root master branch under the name Tic-tac-toe Mockup.png
+Located in root master branch under the name Tic-tac-toe Mockup.png. Was made using Balsamiq.

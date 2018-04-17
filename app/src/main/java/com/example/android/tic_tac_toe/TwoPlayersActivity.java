@@ -73,11 +73,11 @@ import java.util.Objects;
         if(rand == 1){
             playerOneTurn = true;
             playerTwoTurn = false;
-            Toast.makeText(this, playerOneName + " won the first move!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, playerOneName + " makes the first move!", Toast.LENGTH_SHORT).show();
         } else {
             playerOneTurn = false;
             playerTwoTurn = true;
-            Toast.makeText(this, playerTwoName + " won the first move!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, playerTwoName + " makes the first move!", Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -205,11 +205,11 @@ import java.util.Objects;
         if(rand == 1){
             playerOneTurn = true;
             playerTwoTurn = false;
-            Toast.makeText(this, playerOneName + " won the first move!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, playerOneName + " makes the first move!", Toast.LENGTH_SHORT).show();
         } else {
             playerOneTurn = false;
             playerTwoTurn = true;
-            Toast.makeText(this, playerTwoName + " won the first move!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, playerTwoName + " makes the first move!", Toast.LENGTH_SHORT).show();
         }
 
     }
