@@ -31,8 +31,8 @@ public class OnePlayerActivity extends AppCompatActivity {
 
         setBoard();
 
-        player = findViewById(R.id.player);
-        android = findViewById(R.id.android);
+        player = findViewById(R.id.sbPlayer);
+        android = findViewById(R.id.sbAndroid);
 
         Button buttonReset = findViewById(R.id.button_reset);
         buttonReset.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +43,8 @@ public class OnePlayerActivity extends AppCompatActivity {
                 playerPoints = 0;
                 androidPoints = 0;
 
-                player.setText("Player: " + playerPoints);
-                android.setText("Android: " + androidPoints);
+                player.setText("" + playerPoints);
+                android.setText("" + androidPoints);
 
             }
         });
@@ -157,8 +157,8 @@ public class OnePlayerActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void updatePointsText() {
-        player.setText("Player: " + playerPoints);
-        android.setText("Android: " + androidPoints);
+        player.setText("" + playerPoints);
+        android.setText("" + androidPoints);
     }
 
     class MyClickListener implements View.OnClickListener {

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.Objects;
 
-public class TwoPlayersActivity extends AppCompatActivity implements View.OnClickListener {
+@SuppressWarnings("ALL") public class TwoPlayersActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final Button[][] buttons = new Button[3][3];
 
@@ -19,11 +19,9 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
 
     private int roundCount;
 
-    private int playerOnePoints;
-    private int playerTwoPoints;
+    private int playerOnePoints,playerTwoPoints;
 
-    private TextView playerOne;
-    private TextView playerTwo;
+    private TextView playerOne, playerTwo, scorePlayerOne, scorePlayerTwo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +30,9 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
 
         playerOne = findViewById(R.id.playerOne);
         playerTwo = findViewById(R.id.playerTwo);
+
+        scorePlayerOne = findViewById(R.id.sbPlayerOne);
+        scorePlayerTwo = findViewById(R.id.sbPlayerTwo);
 
         Intent in = getIntent();
         //noinspection deprecation
@@ -60,8 +61,8 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
                 playerOnePoints = 0;
                 playerTwoPoints = 0;
 
-                playerOne.setText(playerOneName + playerOnePoints);
-                playerTwo.setText(playerTwoName + playerTwoPoints);
+                scorePlayerOne.setText("" + playerOnePoints);
+                scorePlayerTwo.setText("" + playerTwoPoints);
 
             }
         });
@@ -175,16 +176,9 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
     @SuppressWarnings("ConstantConditions")
     @SuppressLint("SetTextI18n")
     private void updatePointsText() {
-        Intent in = getIntent();
-        //noinspection deprecation
-        final String playerOneName = in.getExtras().getString("playerOneName");
-        //noinspection deprecation
-        final String playerTwoName = in.getExtras().getString("playerTwoName");
-        playerOne.setText(playerOneName);
-        playerTwo.setText(playerTwoName);
 
-        playerOne.setText(playerOneName + playerOnePoints);
-        playerTwo.setText(playerTwoName + playerTwoPoints);
+        scorePlayerOne.setText("" + playerOnePoints);
+        scorePlayerTwo.setText("" + playerTwoPoints);
     }
 
     private void resetBoard() {
@@ -194,8 +188,29 @@ public class TwoPlayersActivity extends AppCompatActivity implements View.OnClic
             }
         }
 
+        Intent in = getIntent();
+        //noinspection deprecation
+        final String playerOneName = Objects.requireNonNull(in.getExtras()).getString("playerOneName");
+        //noinspection deprecation
+        final String playerTwoName = in.getExtras().getString("playerTwoName");
+        playerOne.setText(playerOneName);
+        playerTwo.setText(playerTwoName);
+
         roundCount = 0;
         playerOneTurn = true;
+
+        java.util.Random generator = new java.util.Random();
+        int rand = generator.nextInt(2) + 1;
+
+        if(rand == 1){
+            playerOneTurn = true;
+            playerTwoTurn = false;
+            Toast.makeText(this, playerOneName + " won the first move!", Toast.LENGTH_SHORT).show();
+        } else {
+            playerOneTurn = false;
+            playerTwoTurn = true;
+            Toast.makeText(this, playerTwoName + " won the first move!", Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

@@ -18,7 +18,8 @@
             android:layout_alignParentStart="true"
             android:layout_margin="10dp"
             android:layout_toStartOf="@id/playerTwo"
-            android:text="@string/player_1_0"
+            android:hint="@string/player_1"
+            android:text=""
             android:textColor="#000000"
             android:textSize="30sp" />
 
@@ -28,7 +29,41 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_margin="10dp"
-            android:text="@string/player_2_0"
+            android:hint="@string/player_2"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sbPlayerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:layout_toStartOf="@id/sbPlayerTwo"
+            android:hint="@string/zero"
+            android:paddingEnd="30dp"
+            android:paddingStart="30dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/sbPlayerTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:hint="@string/zero"
+            android:paddingEnd="35dp"
+            android:paddingStart="35dp"
+            android:text=""
             android:textColor="#000000"
             android:textSize="30sp" />
 
@@ -42,7 +77,7 @@
         <Button
             android:id="@+id/button_00"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -52,7 +87,7 @@
         <Button
             android:id="@+id/button_01"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -62,7 +97,7 @@
         <Button
             android:id="@+id/button_02"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -79,7 +114,7 @@
         <Button
             android:id="@+id/button_10"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -89,7 +124,7 @@
         <Button
             android:id="@+id/button_11"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -99,7 +134,7 @@
         <Button
             android:id="@+id/button_12"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -116,7 +151,7 @@
         <Button
             android:id="@+id/button_20"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -126,7 +161,7 @@
         <Button
             android:id="@+id/button_21"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"
@@ -136,7 +171,7 @@
         <Button
             android:id="@+id/button_22"
             style="?android:buttonBarButtonStyle"
-            android:layout_width="113dp"
+            android:layout_width="110dp"
             android:layout_height="match_parent"
             android:layout_margin="3dp"
             android:background="#0AC92B"

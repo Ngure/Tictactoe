@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">Tic-tac-toe</string>
     <string name="todo">TODO</string>
-    <string name="android_0">Android: 0</string>
-    <string name="player_0">Player: 0</string>
+    <string name="android">Android</string>
+    <string name="player">Player</string>
     <string name="reset">reset</string>
     <string name="_1_player">1 player</string>
     <string name="_2_players">2 players</string>
-    <string name="player_1_0">Player 1: 0</string>
-    <string name="player_2_0">Player 2: 0</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
     <string name="begin">begin</string>
     <string name="player_one_name">Player One Name</string>
     <string name="player_two_name">Player Two Name</string>
+    <string name="zero">0</string>
 </resources>
